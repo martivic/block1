@@ -17,17 +17,17 @@
 	 Bought: {code: 2, text: 'Order Bought and Purchased'},
 	 Cancelled: {code:3, text: 'Order Cancelled'},
 	 Ordered: {code:4, text: 'Order Submitted to Supplier Provider'},
-	 ShipRequest {code:5, text: 'Shipping Requested'},
-	 Delivered {code:6, text: 'Order Delivered'},
-	 Delivering {code:15, text: 'Order Being Delivered in Route'},
-	 Backordered {code:7, text: 'Order Backordered'},
-	 Dispute {code:8, text: 'Order in Dispute'},
-	 Resolve {code:9, text: 'Order Dispute Resolved'},
-	 PayRequest {code:10, text: 'Payment Request'},
-	 Authorize {code:11, text: 'Payment Approved and Authorized'},
-	 Paid {code:14, text: 'Payment Processed'},
-	 Refund {code:12, text: 'Order Refund Requested'},
-	 Refunded {code:3, text: 'Order Refunded'},
+	 ShipRequest: {code:5, text: 'Shipping Requested'},
+	 Delivered: {code:6, text: 'Order Delivered'},
+	 Delivering: {code:15, text: 'Order Being Delivered in Route'},
+	 Backordered: {code:7, text: 'Order Backordered'},
+	 Dispute: {code:8, text: 'Order in Dispute'},
+	 Resolve: {code:9, text: 'Order Dispute Resolved'},
+	 PayRequest: {code:10, text: 'Payment Request'},
+	 Authorize: {code:11, text: 'Payment Approved and Authorized'},
+	 Paid: {code:14, text: 'Payment Processed'},
+	 Refund: {code:12, text: 'Order Refund Requested'},
+	 Refunded: {code:3, text: 'Order Refunded'},
  }
  
  /**create an order to purchase 
@@ -41,7 +41,7 @@
 	 purchase.order.financeCo = purchase.financeCo;
 	 purchase.order.created = new Date().toISOString();
 	 purchase.order.status = JSON.stringify(orderStatus.Created);
-	 return getAssetRegistry ('org.dotbox.ecaregiverNetwork.Order')
+	 return getAssetRegistry ('org.dotbox.caregiverNetwork.Order')
 	    .then(function (assetRegistry){
 			return assetRegistry.update(purchase.order);
 		});
