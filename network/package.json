@@ -2,7 +2,7 @@
   "engines": {
   "composer": ""
   },
-  "name": "DotBoxBlockchain-network",
+  "name": "Dotboxcaregiver-network",
   "version":"0.1.5",
   "description": "Blockchain Dotbox network",
   "networkImage": "https://github.com/martivic/composer-sample-networks/packages/basic-sample-network/networkimage.svg"
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/martivic/ZeroToBlockchain"
+    "url": "https://github.com/martivic/block1"
   },
   "keywords": [
     "zero",
