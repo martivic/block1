@@ -17,15 +17,15 @@
 const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
 
 require('chai').should();
-
-// const network = 'zerotoblockchain-network';
+ 
+// const network = 'dotboxcaregiver-network';
 const _timeout = 90000;
-const NS = 'org.acme.Z2BTestNetwork';
+const NS = 'org.dotbox.caregiverNetwork';
 const orderNo = '12345';
-const buyerID = 'billybob@email.com';
-const sellerID = 'simon@email.com';
-const providerID = 'everythingNow@email.com';
-const shipperID = 'everythingReallyFast@email.com';
+const buyerID = 'billybob@dotbox.com';
+const sellerID = 'simon@dotbox.com';
+const providerID = 'everythingNow@dotbox.com';
+const shipperID = 'everythingReallyFast@dotbox.com';
 const financeCoID = 'GlobalFinancier';
 const dispute = 'ordered products received but defective';
 const resolve = 'defective products will be refunded';
@@ -93,10 +93,10 @@ function createOrderTemplate (_inbound)
  */
 function addItems (_inbound)
 {
-    _inbound.items.push('{"itemNo": 1, "itemDescription": "Macbook Pro 16Gb, 1Tb", "quantity": 2, "unitPrice": 1285, "extendedPrice": 3470}');
-    _inbound.items.push('{"itemNo": 2, "itemDescription": "Macbook Pro 8Gb, .5Tb", "quantity": 3, "unitPrice": 985, "extendedPrice": 2955}');
-    _inbound.items.push('{"itemNo": 3, "itemDescription": "Lenovo Thinkpad W520 16Gb, .25Tb", "quantity": 1, "unitPrice": 500, "extendedPrice": 500}');
-    _inbound.items.push('{"itemNo": 4, "itemDescription": "Lenovo Thinkpad W520 32Gb, 1Tb", "quantity": 4, "unitPrice": 1565, "extendedPrice": 6260}');
+    _inbound.items.push('{"itemNo": 1, "itemDescription": "DotBox Unit", "quantity": 2, "unitPrice": 1285, "extendedPrice": 3470}');
+    _inbound.items.push('{"itemNo": 2, "itemDescription": "DotBox Subscription": 3, "unitPrice": 985, "extendedPrice": 2955}');
+    _inbound.items.push('{"itemNo": 3, "itemDescription": "Caregiver Service Order", "quantity": 1, "unitPrice": 500, "extendedPrice": 500}');
+    _inbound.items.push('{"itemNo": 4, "itemDescription": "Caregiver Service Service", "quantity": 4, "unitPrice": 1565, "extendedPrice": 6260}');
     _inbound.amount = JSON.parse(_inbound.items[0]).extendedPrice;
     _inbound.amount += JSON.parse(_inbound.items[1]).extendedPrice;
     _inbound.amount += JSON.parse(_inbound.items[2]).extendedPrice;
@@ -110,7 +110,7 @@ describe('Finance Network', function () {
     let businessNetworkConnection;
     before(function () {
         businessNetworkConnection = new BusinessNetworkConnection();
-        return businessNetworkConnection.connect('admin@zerotoblockchain-network');
+        return businessNetworkConnection.connect('admin@dotbooxcaregiver-network');
     });
 
     describe('#createOrder', () => {
