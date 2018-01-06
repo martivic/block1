@@ -7,6 +7,9 @@ participant Buyer identified by buyerID extents Member{
 }
 participant Seller identified by sellerID extents Member{
 	o String sellerID
+} 
+participant Shipper identified by ShipperID extends Member{
+    o String shipperID
 }
 participant Provider identified by ProviderID extends Member {
 	o String providerID
@@ -23,7 +26,7 @@ asset Order identified by orderNumber {
 	o String resolve
 	o String backorder
 	o String refund
-	0 Integer amount
+	o Integer amount
 	o String created
 	o String bought
 	o String cancelled
@@ -34,7 +37,7 @@ asset Order identified by orderNumber {
 	o String delivering
 	o String disputeOpened
 	o String disputeResolved
-	0 String paymentRequested
+	o String paymentRequested
 	o String orderRefunded
 	o String approved
 	o String paid
