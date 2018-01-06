@@ -22,12 +22,12 @@ event delivered extends BasicEvent {
 	o String orderNumber
 }	
 //notify seller, financeCo order is in dispute
-events dispute extends BasicEvent {
+event dispute extends BasicEvent {
 	o String orderNumber
 }
 
 //notify seller, buyer that dispute has been resolved
-events resolved extends BasicEvent {
+event resolved extends BasicEvent {
 	o String orderNumber
 }
 //notify financeCo, buyer that a request for payment issued
