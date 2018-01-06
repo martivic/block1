@@ -5,7 +5,7 @@
   "name": "Dotboxcaregiver-network",
   "version":"0.1.5",
   "description": "Blockchain Dotbox network",
-  "networkImage": "https://github.com/martivic/composer-sample-networks/packages/basic-sample-network/networkimage.svg"
+  "networkImage": "https://github.com/martivic/composer-sample-networks/packages/basic-sample-network/networkimage.svg",
   "networkImageanimated": "https://github.com/martivic/composer-sample-networks/packages/basic-sample-network/networkimageanimated.svg",
   "scripts": {
   "prepublish": "mkdirp ./network/dist && composer archive create --sourceType dir --sourceName . -a ./network/dist/dotboxblockchain-network.bna",
